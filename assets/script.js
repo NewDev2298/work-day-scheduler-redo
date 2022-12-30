@@ -2,7 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-    var currTime = dayjs();
+    var currTime = dayjs().hour();
+    console.log(currTime);
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -29,4 +30,4 @@ $(function () {
   
 });
 
-$(".#currentDay").text(dayjs().format("dddd, MMMM,Do"));
+$("#currentDay").text(dayjs().format("dddd, MMMM Do"));
